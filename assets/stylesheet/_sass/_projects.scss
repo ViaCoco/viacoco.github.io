@@ -1,0 +1,107 @@
+.projects {
+	background: $off-white-color;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 15em;
+	min-height: 600px;
+
+	img {
+		width: 150px;
+		height: auto;
+		position: relative;
+		left: 50%;
+		margin-left: -75px;
+		padding: 25px;
+	}
+
+	.projects-text {
+		font: {
+			size: 1.2em;
+			weight: 300;
+		}
+		color: $black;
+		background: $off-white-color;
+		text-align: center;
+		width: 75%;
+		margin: 0 auto;
+		padding: 2%;
+
+		a {
+			color: $off-white-color;
+			background: $primary-color;	
+			padding: 0 5px;
+		}
+	}
+
+	@include MQ(M) {
+			.projects-text {
+				padding: 5% 2%;
+			}
+			
+	}
+
+	@include MQ(L) {
+			.projects-text {
+				padding: 5% 2%;
+			}
+	}
+
+	.project-div {
+		width: 90%;
+		position: relative;
+		margin-left: 10%;
+		display: inline-block;
+
+
+
+	.project {
+		margin: 0.2em 0;
+		width: 90%;
+		padding: 0;
+		display: inline-block;
+		border: 3px solid $black;
+
+		&:hover {
+			background: $black;
+		}
+
+		a {
+			color: $primary-color;
+
+			&:hover {
+				color: $off-white-color;
+			}
+
+		.projects-img {
+			padding: 1em 3em;
+		}
+
+		.project-description {
+			position: relative;
+			display: block;
+			width: 90%;
+			height: 150px;
+			margin: 0 auto;
+			text-align: center;
+			font-weight: 300;
+		}
+		}	
+	}
+
+	@include MQ(M) {
+			.project {
+				width: 30%;
+			}
+			
+	}
+
+	@include MQ(L) {
+			.project {
+				width: 30%;
+			}
+	}
+	}
+}

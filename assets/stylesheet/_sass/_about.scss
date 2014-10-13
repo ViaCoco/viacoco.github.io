@@ -1,0 +1,48 @@
+.about {
+	margin-top: 15em;
+	background: $off-white-color;
+	width: 100%;
+	padding: 0;
+	min-height: 600px;
+
+	img {
+		width: 150px;
+		height: auto;
+		position: relative;
+		left: 50%;
+		margin-left: -75px;
+		padding: 25px;
+	}
+
+	.about-text {
+		font: {
+			size: 20px;
+			weight: 300;
+		}
+		text-align: left;
+		width: 90%;
+		margin: 0 auto;
+		padding: 5%;
+	}
+
+	@include MQ(M) {
+		.about-text {
+			width: 75%;
+			text-align: center;
+		}
+		.about {
+			min-height: 800px;
+		}
+	}
+
+
+	@include MQ(L) {
+		.about-text {
+			width: 75%;
+			text-align: center;
+		}
+		.about {
+			min-height: 1000px;
+		}
+	}
+}

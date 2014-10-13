@@ -1,0 +1,16 @@
+# Site settings
+title: Maša Černovsek Logar
+email: masa.cernovsek@gmail.com
+description: "Portfolio"
+baseurl: ""
+url: "http://viacoco.github.io/"
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+
+sass:
+    sass_dir: assets/stylesheet/_sass
+    style: compressed
