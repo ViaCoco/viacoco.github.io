@@ -204,7 +204,7 @@ html, body {
 		background-color: $off-white-color;
 		font-size: 2.5em;
 		font-weight: 300;
-		text-align: left;
+		text-align: center;
 		padding: 0 2%;
 		left: 0;
 
@@ -216,6 +216,7 @@ html, body {
 	@include MQ(M) {
 		h1 {
 			font-size: 4em;
+			text-align: left;
 		}
 	}
 
