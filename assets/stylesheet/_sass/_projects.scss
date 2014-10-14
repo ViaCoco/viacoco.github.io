@@ -24,7 +24,7 @@
 		}
 		color: $black;
 		background: $off-white-color;
-		text-align: center;
+		text-align: left;
 		width: 75%;
 		margin: 0 auto;
 		padding: 2%;
@@ -38,12 +38,14 @@
 
 	@include MQ(M) {
 		.projects-text {
+			text-align: center;
 			padding: 5% 2%;
 		}		
 	}
 
 	@include MQ(L) {
 		.projects-text {
+			text-align: center;
 			padding: 5% 2%;
 		}
 	}

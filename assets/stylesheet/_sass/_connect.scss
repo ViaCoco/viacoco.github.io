@@ -23,7 +23,7 @@
 			weight: 300;
 		}
 		color: $black;
-		text-align: center;
+		text-align: left;
 		width: 75%;
 		margin: 0 auto;
 		padding: 2%;
@@ -37,6 +37,7 @@
 	@include MQ(M) {
 			.connect-text {
 				padding: 5%;
+				text-align: center;
 			}
 			
 	}
@@ -44,6 +45,7 @@
 	@include MQ(L) {
 			.connect-text {
 				padding: 5%;
+				text-align: center;
 			}
 	}
 
