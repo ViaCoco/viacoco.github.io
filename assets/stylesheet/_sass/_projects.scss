@@ -91,14 +91,14 @@
 
 		@include MQ(M) {
 			.project {
-				width: 33.1%;
+				width: 33%;
 				margin-left: 0;
 			}		
 		}
 
 		@include MQ(L) {
 			.project {
-				width: 33.1%;
+				width: 33%;
 				margin-left: 0;
 			}
 		}
