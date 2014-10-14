@@ -49,9 +49,9 @@
 	}
 
 	.project-div {
-		width: 90%;
+		width: 100%;
 		position: relative;
-		margin-left: 10%;
+		padding: 0 10%;
 		display: inline-block;
 	
 	.project {
@@ -88,13 +88,13 @@
 
 		@include MQ(M) {
 			.project {
-				width: 30%;
+				width: 33.1%;
 			}		
 		}
 
 		@include MQ(L) {
 			.project {
-				width: 30%;
+				width: 33.1%;
 			}
 		}
 	}
