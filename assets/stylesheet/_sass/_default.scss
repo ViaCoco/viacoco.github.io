@@ -197,6 +197,7 @@ html, body {
 	h1 {
 		position: absolute;
 		top: 25%;
+		width: 100%;
 		max-width: $M;
 		color: $black;
 		font-family: $body-font;
@@ -205,6 +206,7 @@ html, body {
 		font-weight: 300;
 		text-align: left;
 		padding: 0 2%;
+		left: 0;
 
 		.name {
 			color: $primary-color;
