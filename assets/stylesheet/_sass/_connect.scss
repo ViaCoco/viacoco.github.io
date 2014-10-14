@@ -56,7 +56,7 @@
 
 		.connection {
 			margin: 0.2em 0;
-			width: 100%;
+			width: 90%;
 			border: 3px solid $black;
 
 			&:hover {
@@ -74,7 +74,8 @@
 				padding: 1em 3em;
 			}
 
-			.connection-description {				position: relative;
+			.connection-description {				
+				position: relative;
 				display: block;
 				width: 80%;
 				margin: 0 auto;
