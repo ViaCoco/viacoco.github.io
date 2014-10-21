@@ -201,48 +201,50 @@ html, body {
 			padding: 0 2%;
 			left: 0;
 
-		.name {
-			color: $primary-color;
+			.name {
+				color: $primary-color;
+			}
 		}
-	}
 
-	@include MQ(M) {
-		h1 {
-			font-size: 4em;
-			text-align: left;
+		@include MQ(M) {
+			h1 {
+				font-size: 4em;
+				text-align: left;
+			}
 		}
-	}
 
-	h2 {
-		position: absolute;
-		top: 50%;
-		width: 100%;
-		padding: 0 1%;
-		max-width: $L;
-		color: $off-white-color;
-		background-color: $black;
-		font-family: $body-font;
-		font-size: 3.5em;
-		font-weight: 300;
-		text-align: left;
-		letter-spacing: 0.1em;
-		visibility: hidden;
-
-		.profession {
-			color: $primary-color;
-		}
-	}
-
-	@include MQ(M) {
 		h2 {
-			left: 5%;
-			width: 90%;
+			position: absolute;
+			top: 50%;
+			width: 100%;
 			padding: 0 1%;
-			font-size: 2.5em;
-			text-align: right;
-			visibility: visible;
+			max-width: $L;
+			color: $off-white-color;
+			background-color: $black;
+			font-family: $body-font;
+			font-size: 3.5em;
+			font-weight: 300;
+			text-align: left;
+			letter-spacing: 0.1em;
+			visibility: hidden;
+			z-index: -3;
+
+			.profession {
+				color: $primary-color;
+			}
 		}
-	}
+
+		@include MQ(M) {
+			h2 {
+				left: 5%;
+				width: 90%;
+				padding: 0 1%;
+				font-size: 2.5em;
+				text-align: right;
+				visibility: visible;
+				z-index: 3;
+			}
+		}
 
 	@include MQ(L) {
 		h2 {
@@ -251,7 +253,7 @@ html, body {
 			padding: 0 2%;
 			text-align: right;
 			font-size: 2.5em;
-			visibility: visible;
+			visibility: visible;	
 		}
 	}
 }
