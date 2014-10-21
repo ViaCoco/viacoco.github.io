@@ -57,41 +57,39 @@
 		padding: 0 10%;
 		display: inline-block;
 	
-	.project {
-		width: 90%;
-		padding: 4%;
-		margin: 5% 0;
-		margin-left: 5%;
-		display: inline-table;
-		border: 3px solid $black;
-		overflow: hidden;
-
-		&:hover {
-			background: $black;
-		}
-
-		a {
-			color: $primary-color;
+		.project {
+			width: 90%;
+			padding: 4%;
+			margin: 5% 0;
+			margin-left: 5%;
+			display: inline-table;
+			border: 3px solid $black;
+			overflow: hidden;
 
 			&:hover {
-				color: $off-white-color;
+				background: $black;
 			}
 
-		.projects-img {
-			padding: 1em 3em;
-		}
+			a {
+				color: $primary-color;
 
-		.project-description {
-			position: relative;
-			display: block;
-			height: 100px;
-			margin: 0 auto;
-			text-align: center;
-			font-weight: 300;
-		}
-	}	
-}
+				&:hover {
+					color: $off-white-color;
+				}
 
-		
+				.projects-img {
+					padding: 1em 3em;
+				}
+
+				.project-description {
+					position: relative;
+					display: block;
+					height: 100px;
+					margin: 0 auto;
+					text-align: center;
+					font-weight: 300;
+				}
+			}	
+		}	
 	}
 }

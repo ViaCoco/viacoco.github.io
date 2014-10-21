@@ -35,18 +35,17 @@
 	}
 
 	@include MQ(M) {
-			.connect-text {
-				padding: 5%;
-				text-align: center;
-			}
-			
+		.connect-text {
+			padding: 5%;
+			text-align: center;
+		}		
 	}
 
 	@include MQ(L) {
-			.connect-text {
-				padding: 5%;
-				text-align: center;
-			}
+		.connect-text {
+			padding: 5%;
+			text-align: center;
+		}
 	}
 
 	.connect-div {
@@ -73,20 +72,20 @@
 					color: $off-white-color;
 				}
 
-			.projects-img {
-				padding: 1em 3em;
-			}
+				.projects-img {
+					padding: 1em 3em;
+				}
 
-			.connection-description {				
-				position: relative;
-				display: block;
-				width: 80%;
-				margin: 0 auto;
-				text-align: center;
-				font-weight: 300;
-			}		
+				.connection-description {				
+					position: relative;
+					display: block;
+					width: 80%;
+					margin: 0 auto;
+					text-align: center;
+					font-weight: 300;
+				}		
+			}
 		}
-	}
 
 		@include MQ(M) {
 			.connection {
