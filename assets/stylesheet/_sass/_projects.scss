@@ -53,12 +53,13 @@
 	.project-div {
 		width: 100%;
 		position: relative;
+		margin-top: 2%;
 		padding: 0 10%;
 		display: inline-block;
 	
 	.project {
 		width: 90%;
-		padding: 2%;
+		padding: 4%;
 		margin: 5% 0;
 		margin-left: 5%;
 		display: inline-table;
@@ -91,18 +92,6 @@
 	}	
 }
 
-		@include MQ(M) {
-			.project {
-				width: 33%;
-				margin-left: 0;
-			}		
-		}
-
-		@include MQ(L) {
-			.project {
-				width: 33%;
-				margin-left: 0;
-			}
-		}
+		
 	}
 }

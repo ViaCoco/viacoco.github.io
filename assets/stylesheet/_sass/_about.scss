@@ -23,6 +23,11 @@
 		width: 90%;
 		margin: 0 auto;
 		padding: 5%;
+
+		.strong {
+			font-size:  24px;
+			color: $primary-color;
+		}
 	}
 
 	@include MQ(M) {
