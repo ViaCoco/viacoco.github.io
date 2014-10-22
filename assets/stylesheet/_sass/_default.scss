@@ -222,8 +222,7 @@ html, body {
 
 		h2 {
 			position: absolute;
-			top: 50%;
-			width: 100%;
+			top: -100%;
 			padding: 0 1%;
 			max-width: $L;
 			color: $off-white-color;
@@ -242,6 +241,7 @@ html, body {
 
 		@include MQ(M) {
 			h2 {
+				top: 50%;
 				left: 5%;
 				width: 90%;
 				padding: 0 1%;
@@ -253,6 +253,7 @@ html, body {
 
 	@include MQ(L) {
 		h2 {
+			top: 50%;
 			width: 90%;
 			left: 5%;
 			padding: 0 2%;
