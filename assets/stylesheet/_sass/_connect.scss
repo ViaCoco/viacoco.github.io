@@ -79,28 +79,11 @@
 				.connection-description {				
 					position: relative;
 					display: block;
-					width: 80%;
+					width: 70%;
 					margin: 0 auto;
 					text-align: center;
 					font-weight: 300;
 				}		
-			}
-		}
-
-		@include MQ(M) {
-			.connection {
-				width: 30%;	
-				margin-left: 0;
-				display: inline-block;
-			}
-		}
-
-
-		@include MQ(L) {
-			.connection {
-				width: 30%;		
-				margin-left: 0;
-				display: inline-block;
 			}
 		}
 	}
