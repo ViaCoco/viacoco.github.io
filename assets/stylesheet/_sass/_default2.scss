@@ -192,7 +192,7 @@ html, body {
 			max-width: $M;
 			color: $purple;
 			font-family: $body-font;
-			font-size: 3.2em;
+			font-size: 2.5em;
 			font-weight: 300;
 			text-align: center;
 			padding: 0 1%;
@@ -206,7 +206,7 @@ html, body {
 		@include MQ(M) {
 			h1 {
 				top: 38%;
-				font-size: 4em;
+				font-size: 3em;
 				text-align: left;
 			}
 		}
@@ -220,7 +220,7 @@ html, body {
 			color: $off-white-color;
 			background-color: $purple;
 			font-family: $title-font;
-			font-size: 2.4em;
+			font-size: 2em;
 			font-weight: 300;
 			text-align: center;
 			letter-spacing: 0.1em;
@@ -243,10 +243,10 @@ html, body {
 
 	@include MQ(L) {
 		h2 {
-			top: 50%;
+			top: 33%;
 			left: 0;
 			padding: 0 1%;
-			text-align: right;
+			text-align: left;
 			font-size: 2.5em;
 			visibility: visible;	
 		}
@@ -282,16 +282,21 @@ html, body {
 		padding: 5%;
 
 		.strong {
-			font-size:  20px;
-			background-color: $off-white-color;
-			padding: 2px 5px;
-			color: $green;
+			font-size:  16px;
+			font-weight: 400;
+			padding: 0;
+			color: $off-white-color;
+			border-bottom: solid 2px $off-white-color;
+		}
+
+		a {
+			padding-bottom: 15px;
 		}
 	}
 
 	@include MQ(M) {
 		.about-text {
-			width: 75%;
+			width: 60%;
 			text-align: left;
 		}
 		.about {
@@ -312,6 +317,7 @@ html, body {
 }
 
 .footer {
+	margin-top: 50px;
 	height: 100px;
 	background-color: $off-white-color;
 	color: $purple;
