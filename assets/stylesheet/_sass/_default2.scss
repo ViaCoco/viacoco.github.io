@@ -1,0 +1,320 @@
+/* -------------------------------- 
+
+Default style
+
+-------------------------------- */
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	overflow-x: hidden;
+	font: {
+		size: 100%;
+		family: $body-font; // variables inside partials > _variables.scss
+	}
+	color: $off-white-color;
+	background-color: $green;
+
+	&.overflow-hidden {
+		/* when primary navigation is visible, the content in the background won't scroll */
+		overflow: hidden;
+	}
+}
+
+a {
+	color: $off-white-color;
+	text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Modules
+
+-------------------------------- */
+
+.container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	width: 90%;
+	max-width: $M; // breakpoints inside partials > _layout.scss
+	margin: 0 auto;
+	@include clearfix;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+html, body {
+	height: 100%;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100px;
+	padding: 10px;
+	width: 100%;
+	z-index: $header-zindex;
+	@include font-smoothing;
+
+	@include MQ(M) {
+		@include transition(background-color .3s);
+
+		/* Force Hardware Acceleration in WebKit */
+		@include transform(translate3d(0,0,0));
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		&.is-fixed {
+			/* when the user scrolls down, we hide the header right above the viewport */
+			position: fixed;
+			top: -100px;
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+		}
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
+			@include transform(translate3d(0,100%,0));
+		}
+	}
+
+	@include MQ(L) {
+		@include transition(background-color .3s);
+
+		/* Force Hardware Acceleration in WebKit */
+		@include transform(translate3d(0,0,0));
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		&.is-fixed {
+			/* when the user scrolls down, we hide the header right above the viewport */
+			position: fixed;
+			top: -100px;
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+		}
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
+			@include transform(translate3d(0,100%,0));
+		}
+	}
+}
+
+.logo {
+	padding: 15px 0;
+	display: block;
+	position: absolute;
+
+	img {
+		display: block;	
+		width: 120px;
+		height: auto;
+	}
+}
+
+@include MQ(M) {
+	.logo{
+		position: fixed;
+		visibility: visible;
+	}
+}
+
+@include MQ(L) {
+	.logo{
+		position: fixed;
+		visibility: visible;
+	}
+}
+
+.nav {
+	max-width: 90%;
+	position: fixed;
+	right: 1em;
+	background-color: $off-white-color;
+	border: 3px solid black;
+	padding: 0.5em 1em;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin-left: 1em;
+		padding: 0.2em;
+	}
+
+	a { 
+		font: {
+			family: $title-font;
+			weight: 700;
+		}
+		display: inline-block;
+		color: $black;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}	
+
+	@include MQ(M) {
+		max-width: 100%;
+		display: block;
+	}
+
+	.intro {
+		height: 100%;
+		z-index: $content-zindex;
+		@include font-smoothing;
+		left: 0;
+
+		.intro-cover {
+  			min-height: 100%;
+  			min-width: 1024px;
+  			width: 100%;
+  			height: auto;
+  			position: fixed;
+  			top: 0;
+  			margin-left: -10px;
+  			overflow-x: hidden;
+		}
+
+		h1 {
+			position: relative;
+			top: 33%;
+			max-width: $M;
+			color: $purple;
+			font-family: $body-font;
+			font-size: 3.2em;
+			font-weight: 300;
+			text-align: center;
+			padding: 0 1%;
+			left: 0;
+
+			.name {
+				color: $off-white-color;
+			}
+		}
+
+		@include MQ(M) {
+			h1 {
+				top: 38%;
+				font-size: 4em;
+				text-align: left;
+			}
+		}
+
+		h2 {
+			position: relative;
+			top: 33%;
+			left:0;
+			padding: 0 1%;
+			max-width: $L;
+			color: $off-white-color;
+			background-color: $purple;
+			font-family: $title-font;
+			font-size: 2.4em;
+			font-weight: 300;
+			text-align: center;
+			letter-spacing: 0.1em;
+
+			.profession {
+				color: $off-white-color;
+			}
+		}
+
+		@include MQ(M) {
+			h2 {
+				top: 33%;
+				left: 0;
+				padding: 0 1%;
+				font-size: 2.5em;
+				text-align: left;
+				visibility: visible;
+			}
+		}
+
+	@include MQ(L) {
+		h2 {
+			top: 50%;
+			left: 0;
+			padding: 0 1%;
+			text-align: right;
+			font-size: 2.5em;
+			visibility: visible;	
+		}
+	}
+}
+
+.about {
+	margin-top: 0;
+	background: $purple;
+	width: 100%;
+	padding: 0;
+	left:0;
+	position:absolute;
+	min-height: 600px;
+
+	img {
+		width: 150px;
+		height: auto;
+		position: relative;
+		left: 50%;
+		margin-left: -75px;
+		padding: 25px;
+	}
+
+	.about-text {
+		font: {
+			size: 16px;
+			weight: 300;
+		}
+		text-align: left;
+		width: 90%;
+		margin: 0 auto;
+		padding: 5%;
+
+		.strong {
+			font-size:  20px;
+			background-color: $off-white-color;
+			padding: 2px 5px;
+			color: $green;
+		}
+	}
+
+	@include MQ(M) {
+		.about-text {
+			width: 75%;
+			text-align: left;
+		}
+		.about {
+			min-height: 800px;
+		}
+	}
+
+
+	@include MQ(L) {
+		.about-text {
+			width: 75%;
+			text-align: left;
+		}
+		.about {
+			min-height: 1000px;
+		}
+	}
+}
+
+.footer {
+	height: 100px;
+	background-color: $off-white-color;
+	color: $purple;
+	text-align: center;
+	padding: 25px;
+}
